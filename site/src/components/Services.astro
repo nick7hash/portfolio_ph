@@ -1,0 +1,258 @@
+---
+// Services section — Commercial photography & visual storytelling capabilities
+---
+
+<section class="services" id="services" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="services-layout">
+
+      <!-- Left: heading -->
+      <div class="services-left reveal">
+        <p class="eyebrow"><span class="section-line"></span>Capabilities</p>
+        <h2 id="services-heading" class="services-title">
+          Commercial<br />
+          <span class="services-title-accent">Specialties</span>
+        </h2>
+        <p class="services-intro">
+          High-impact visual production tailored for restaurants, cafes,
+          apparel brands, and commercial campaigns across India.
+        </p>
+
+        <a
+          href="https://wa.me/918264531881?text=Hi%20Nitin,%20I'd%20like%20to%20discuss%20commercial%20photography%20services%20with%20Grays%20Photography."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--red services-btn"
+          id="services-cta"
+        >
+          <span>Discuss Your Campaign</span>
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <!-- Right: service list -->
+      <div class="services-right">
+        <ol class="service-list" role="list">
+
+          <li class="service-item reveal">
+            <div class="service-num" aria-hidden="true">01</div>
+            <div class="service-body">
+              <h3 class="service-name">Restaurant, Food &amp; Beverage</h3>
+              <p class="service-desc">
+                Culinary photography crafted for hospitality brands. Full menu campaigns,
+                table layouts, artisanal cocktails, and atmospheric dining ambiance.
+              </p>
+              <ul class="service-tags" aria-label="Included in this service">
+                <li>Restaurants &amp; Cafes</li>
+                <li>Menu Overhauls</li>
+                <li>Cocktails &amp; Bar</li>
+                <li>Food Styling</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="service-item reveal">
+            <div class="service-num" aria-hidden="true">02</div>
+            <div class="service-body">
+              <h3 class="service-name">Lifestyle &amp; Apparel Lookbooks</h3>
+              <p class="service-desc">
+                High-fashion and streetwear lookbooks. Model direction, natural and studio
+                lighting setups, and garment texture detail shots.
+              </p>
+              <ul class="service-tags" aria-label="Included in this service">
+                <li>Apparel Brands</li>
+                <li>Seasonal Lookbooks</li>
+                <li>E-Commerce Fashion</li>
+                <li>Studio &amp; Location</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="service-item reveal">
+            <div class="service-num" aria-hidden="true">03</div>
+            <div class="service-body">
+              <h3 class="service-name">E-Commerce &amp; Product Photography</h3>
+              <p class="service-desc">
+                Clean, color-accurate, high-conversion product photography for D2C brands,
+                marketplaces, and digital catalogs. Pure white packshots and stylized brand editorial.
+              </p>
+              <ul class="service-tags" aria-label="Included in this service">
+                <li>D2C Catalog Imagery</li>
+                <li>Amazon &amp; Webstore Packshots</li>
+                <li>Macro Texture &amp; Detail</li>
+                <li>Ghost Mannequin &amp; Flat Lay</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="service-item reveal">
+            <div class="service-num" aria-hidden="true">04</div>
+            <div class="service-body">
+              <h3 class="service-name">Short-Form Video &amp; Reels</h3>
+              <p class="service-desc">
+                Dynamic 4K vertical video directed for Instagram reels and digital ads.
+                Paced, color-graded, and delivered with audio design ready to publish.
+              </p>
+              <ul class="service-tags" aria-label="Included in this service">
+                <li>Instagram Reels</li>
+                <li>Brand Teasers</li>
+                <li>Food Prep Videos</li>
+                <li>Social Campaigns</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="service-item reveal">
+            <div class="service-num" aria-hidden="true">05</div>
+            <div class="service-body">
+              <h3 class="service-name">PR, Events &amp; Commercial Brand Shoots</h3>
+              <p class="service-desc">
+                Editorial documentation for brand launches, hospitality openings,
+                pharmaceutical summits, and corporate milestones.
+              </p>
+              <ul class="service-tags" aria-label="Included in this service">
+                <li>Brand Launches</li>
+                <li>Hospitality Events</li>
+                <li>PR Agencies</li>
+                <li>Corporate Milestones</li>
+              </ul>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    padding-block: var(--space-section);
+    background: var(--bg-mid);
+    border-top: 1px solid var(--border);
+    position: relative;
+  }
+
+  .services::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.25;
+  }
+
+  .services-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(2.5rem, 5vw, 5rem);
+  }
+
+  @media (min-width: 960px) {
+    .services-layout {
+      grid-template-columns: 360px 1fr;
+      align-items: start;
+    }
+  }
+
+  .services-left {
+    position: sticky;
+    top: calc(var(--nav-height) + 2rem);
+  }
+
+  .services-title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 300;
+    color: var(--text-white);
+    margin-block: 0.5rem 1.2rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  .services-title-accent {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--gold-light);
+  }
+
+  .services-intro {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 2.2rem;
+  }
+
+  .service-list {
+    list-style: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .service-item {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 1.5rem;
+    padding-block: 2.2rem;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.28s ease;
+  }
+
+  .service-num {
+    font-family: var(--font-label);
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: var(--gold);
+    opacity: 0.7;
+    padding-top: 0.5rem;
+    letter-spacing: 0.08em;
+  }
+
+  .service-name {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+    font-weight: 400;
+    color: var(--text-white);
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.01em;
+  }
+
+  .service-desc {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+  }
+
+  .service-tags li {
+    font-family: var(--font-label);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    background: rgba(30, 20, 5, 0.03);
+    padding: 0.3rem 0.8rem;
+    border-radius: 1px;
+    transition: all 0.2s ease;
+  }
+
+  .service-item:hover .service-num {
+    opacity: 1;
+    color: var(--gold-light);
+  }
+
+  .service-item:hover .service-tags li {
+    border-color: var(--border-warm);
+    color: var(--text-primary);
+  }
+</style>

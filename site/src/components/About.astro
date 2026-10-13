@@ -1,0 +1,114 @@
+---
+// About section — Showcases Nitin's master edited About Me poster artwork in full
+---
+
+<section class="about" id="about" aria-label="About Nitin Singh Sandhu">
+  <!-- Full-width Master About Poster -->
+  <div class="about-frame reveal-scale">
+    <img
+      src="/images/about.png"
+      alt="About Nitin Singh Sandhu — Grays Photography Chandigarh"
+      class="about-img"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+
+  <div class="container">
+    <!-- Interactive Direct Actions Bar below poster -->
+    <div class="about-actions-bar reveal">
+      <div class="about-actions-left">
+        <a
+          href="https://wa.me/918264531881?text=Hi%20Nitin,%20I'd%20love%20to%20discuss%20a%20photography%20project%20with%20Grays%20Photography."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--red"
+          id="about-whatsapp-btn"
+        >
+          <span>Message on WhatsApp</span>
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a href="tel:+918264531881" class="btn btn--ghost" id="about-call-btn">
+          <span>Call: +91 82645 31881</span>
+        </a>
+
+        <a
+          href="https://www.instagram.com/graysbynitin"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--instagram"
+          id="about-instagram-btn"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>@graysbynitin</span>
+        </a>
+      </div>
+
+      <div class="about-actions-right">
+        <span class="studio-tagline">GRAYS PHOTOGRAPHY · EST. 2022</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding-top: 0;
+    padding-bottom: var(--space-section);
+    background: var(--bg-mid);
+    position: relative;
+    border-top: 1px solid var(--border);
+    width: 100%;
+  }
+
+  .about-frame {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    border-left: none;
+    border-right: none;
+    box-shadow: 0 16px 45px rgba(30, 20, 5, 0.08);
+    background: var(--bg-surface);
+  }
+
+  .about-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .about-actions-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: clamp(1.5rem, 3vw, 2.5rem);
+    padding: clamp(1.2rem, 2.5vw, 1.8rem);
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+
+  .about-actions-left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    align-items: center;
+  }
+
+  .about-actions-right {
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    letter-spacing: 0.14em;
+    color: var(--color-text-dim);
+  }
+</style>

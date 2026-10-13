@@ -1,0 +1,1087 @@
+---
+// Portfolio Work — Editorial Masonry Grid (no "All Campaigns")
+const projects = [
+  // --- Restaurant & Cafe (6) ---
+  {
+    id: "rest-1", title: "Signature Dim Sum", subtitle: "Artisan Plating Campaign",
+    client: "Meliaa Restaurant", location: "Chandigarh", category: "restaurant",
+    tag: "Restaurant & Cafe", image: "/images/restaurant-1.jpg",
+    alt: "Signature beetroot dumplings in a handcrafted bamboo steamer, glistening with glaze",
+    gear: "Sony A7 IV · 90mm Macro f/2.8 · Directional softbox with bounce card",
+    concept: "Delicate translucent wrapper texture and steam warmth to evoke an unforgettable culinary experience."
+  },
+  {
+    id: "rest-2", title: "Botanical Highball", subtitle: "Craft Beverage Campaign",
+    client: "The Glassroom Bar", location: "Chandigarh", category: "restaurant",
+    tag: "Restaurant & Cafe", image: "/images/restaurant-2.jpg",
+    alt: "Crystal highball cocktail garnished with fresh basil leaf under warm golden bokeh lighting",
+    gear: "Sony A7 IV · 50mm f/1.2 GM · Backlit rim light for glass clarity",
+    concept: "Illuminating effervescence and fresh herb oils to deliver crisp, refreshing appetite appeal."
+  },
+  {
+    id: "rest-3", title: "Coupe Noir & Velvet", subtitle: "Dessert Cocktail Concept",
+    client: "Meliaa Lounge", location: "Chandigarh", category: "restaurant",
+    tag: "Restaurant & Cafe", image: "/images/restaurant-3.jpg",
+    alt: "Ribbed coupe glass containing creamy dessert cocktail topped with cocoa dusting and biscuit",
+    gear: "Sony A7 IV · 90mm Macro f/2.8 · High contrast chiaroscuro lighting",
+    concept: "Dramatic chiaroscuro emphasizing cocoa dusted micro-foam and ribbed glassware elegance."
+  },
+  {
+    id: "rest-4", title: "Molecular Smoke & Aroma", subtitle: "Signature Bar Experience",
+    client: "Meliaa Restaurant", location: "Chandigarh", category: "restaurant",
+    tag: "Restaurant & Cafe", image: "/images/restaurant-4.jpg",
+    alt: "Dual craft cocktails enveloped in theatrical dry ice vapor at restaurant bar",
+    gear: "Sony A7 IV · 35mm f/1.4 GM · High-speed flash sync freezing vapor swirl",
+    concept: "Freezing the ethereal swirl of cold dry ice aromatics to reflect modern restaurant theater."
+  },
+  {
+    id: "rest-5", title: "Heritage Table Spread", subtitle: "Full Menu Campaign",
+    client: "Nomad Hospitality", location: "Delhi NCR", category: "restaurant",
+    tag: "Restaurant & Cafe", image: "/images/restaurant-5.jpg",
+    alt: "Artisanal culinary course with contemporary plating and ceramic dinnerware",
+    gear: "Sony A7 IV · 50mm f/1.4 GM · Overhead diffused daylight simulation",
+    concept: "Warm communal dining atmosphere celebrating local ingredients and modern culinary craft."
+  },
+  {
+    id: "rest-6", title: "Chef's Tasting Series", subtitle: "Gourmet Plating Series",
+    client: "Atelier Dining", location: "Chandigarh", category: "restaurant",
+    tag: "Restaurant & Cafe", image: "/images/restaurant-6.jpg",
+    alt: "Fine dining course presented with micro-greens and signature reduction sauce",
+    gear: "Sony A7 IV · 90mm Macro f/2.8 · Precision gridded spot",
+    concept: "Precision focal depth highlighting artisanal sauce luster and organic garnish textures."
+  },
+
+  // --- E-Commerce Products (6) ---
+  {
+    id: "ecom-1", title: "Artisan Granola Crunch", subtitle: "Organic Pantry Packshot",
+    client: "Nourish Table", location: "Studio", category: "ecommerce",
+    tag: "E-Commerce Products", image: "/images/ecommerce-1.jpg",
+    alt: "Glass bowl of artisan golden roasted granola with seeds and dried berries",
+    gear: "Sony A7 IV · 90mm Macro f/2.8 · Overhead diffused octabox & white bounce",
+    concept: "High-key studio lighting with crisp edge highlights accentuating toasted oat cluster texture and organic ingredients."
+  },
+  {
+    id: "ecom-2", title: "Dark Chocolate Clusters", subtitle: "Gourmet Snack Series",
+    client: "Nourish Table", location: "Studio", category: "ecommerce",
+    tag: "E-Commerce Products", image: "/images/ecommerce-2.jpg",
+    alt: "Glass bowl of dark chocolate granola clusters against clean studio background",
+    gear: "Sony A7 IV · 90mm Macro f/2.8 · Precision edge lighting & polariser",
+    concept: "Precision macro depth highlighting rich cocoa glaze and crunchy seed clusters for D2C marketplace listings."
+  },
+  {
+    id: "ecom-3", title: "Whole Roasted Cashews", subtitle: "Premium Dry Fruit Packshot",
+    client: "Pantry Reserve", location: "Studio", category: "ecommerce",
+    tag: "E-Commerce Products", image: "/images/ecommerce-3.jpg",
+    alt: "Glass bowl filled with premium whole roasted cashew nuts",
+    gear: "Sony A7 IV · 50mm f/1.2 GM · Balanced dual strip boxes",
+    concept: "Flawless color fidelity and soft wrapping fill light celebrating smooth golden nut curves and natural freshness."
+  },
+  {
+    id: "ecom-4", title: "Pistachio Cocoa Baklava", subtitle: "Artisanal Confectionery",
+    client: "Levant Delights", location: "Studio", category: "ecommerce",
+    tag: "E-Commerce Products", image: "/images/ecommerce-4.jpg",
+    alt: "Dual chocolate and pistachio rolled filo pastry baklava",
+    gear: "Sony A7 IV · 90mm Macro f/2.8 · Soft side-fill with subtle shadow gradient",
+    concept: "Editorial pastry capture highlighting flaky micro-layers, glistening pistachio syrup, and rich chocolate dusting."
+  },
+  {
+    id: "ecom-5", title: "Walnut Bird's Nest", subtitle: "Mediterranean Pastry Series",
+    client: "Levant Delights", location: "Studio", category: "ecommerce",
+    tag: "E-Commerce Products", image: "/images/ecommerce-5.jpg",
+    alt: "Handcrafted golden filo birds nest pastries with roasted walnut filling",
+    gear: "Sony A7 IV · 90mm Macro f/2.8 · Diffused top box with fill card",
+    concept: "Golden directional side light emphasizing spun pastry threads and honey glaze shine."
+  },
+  {
+    id: "ecom-6", title: "Shredded Filo Kadayif", subtitle: "Luxury Dessert Collection",
+    client: "Sweet Heritage", location: "Studio", category: "ecommerce",
+    tag: "E-Commerce Products", image: "/images/ecommerce-6.jpg",
+    alt: "Square cut shredded filo pastries packed with crushed roasted almonds",
+    gear: "Sony A7 IV · 50mm f/1.2 GM · Rim light accent for edge separation",
+    concept: "Warm studio lighting accentuating intricate toasted filo texture and artisanal syrup crystallization."
+  },
+
+  // --- Ling's Brand (6) ---
+  {
+    id: "ling-1", title: "Magnolia Blossom Tree", subtitle: "Botanical Decor Campaign",
+    client: "Ling's Botanical Co.", location: "Studio", category: "ling",
+    tag: "Ling's Brand", image: "/images/ling-1.jpg",
+    alt: "Potted faux white magnolia flowering tree against warm ivory seamless backdrop",
+    gear: "Sony A7 IV · 50mm f/1.2 GM · Atmospheric studio key with soft bounce",
+    concept: "Studio catalog lighting highlighting natural bark texture, lifelike petal translucency, and elegant branch geometry."
+  },
+  {
+    id: "ling-2", title: "Grand Magnolia Standard", subtitle: "Interior Foliage Series",
+    client: "Ling's Botanical Co.", location: "Studio", category: "ling",
+    tag: "Ling's Brand", image: "/images/ling-2.jpg",
+    alt: "Full height artificial magnolia tree with lush green foliage and ivory buds",
+    gear: "Sony A7 IV · 35mm f/1.4 GM · Diffused softbox array for uniform exposure",
+    concept: "Even wrapping illumination emphasizing specimen balance, lush foliage volume, and lifelike realism for e-commerce catalogs."
+  },
+  {
+    id: "ling-3", title: "Glossed Magnolia Stem", subtitle: "Foliage Detail Shoot",
+    client: "Ling's Botanical Co.", location: "Studio", category: "ling",
+    tag: "Ling's Brand", image: "/images/ling-3.jpg",
+    alt: "Upright magnolia specimen featuring dual-toned bronze and emerald leaves",
+    gear: "Sony A7 IV · 90mm Macro f/2.8 · Dual strip rim lights catching leaf contours",
+    concept: "Subtle specular highlights capturing wax finish on leaves and realistic branch grain."
+  },
+  {
+    id: "ling-4", title: "Autumn Magnolia Branch", subtitle: "Seasonal Botanicals",
+    client: "Ling's Botanical Co.", location: "Studio", category: "ling",
+    tag: "Ling's Brand", image: "/images/ling-4.jpg",
+    alt: "Tall potted faux magnolia tree displaying warm copper-backed foliage",
+    gear: "Sony A7 IV · 50mm f/1.4 GM · Directional soft key with warm reflector",
+    concept: "Warm-toned key light celebrating autumnal botanical hues and lifelike interior styling."
+  },
+  {
+    id: "ling-5", title: "Oleander Floral Shrub", subtitle: "Silk Floral Collection",
+    client: "Ling's Botanical Co.", location: "Studio", category: "ling",
+    tag: "Ling's Brand", image: "/images/ling-5.jpg",
+    alt: "Delicate artificial oleander plant with clustered white blossoms and slender leaves",
+    gear: "Sony A7 IV · 90mm Macro f/2.8 · Large overhead softbox with white fill card",
+    concept: "High-contrast clean lighting capturing delicate petal clusters and vibrant emerald stem foliage."
+  },
+  {
+    id: "ling-6", title: "Botanical Olive & Laurel", subtitle: "Luxury Faux Greenery",
+    client: "Ling's Botanical Co.", location: "Studio", category: "ling",
+    tag: "Ling's Brand", image: "/images/ling-6.jpg",
+    alt: "Lush potted botanical shrub with white floral accents in modern ceramic planter",
+    gear: "Sony A7 IV · 24-70mm f/2.8 GM II · Balanced ambient fill with directional rim",
+    concept: "Architectural botanical presentation showcasing dense organic branching for commercial interior designers."
+  },
+
+  // --- Lifestyle & Apparel (6) ---
+  {
+    id: "life-1", title: "Earth & Tactile Form", subtitle: "Seasonal Apparel Lookbook",
+    client: "Boutique Label", location: "Studio", category: "lifestyle",
+    tag: "Lifestyle & Apparel", image: "/images/lifestyle-1.jpg",
+    alt: "Model wearing textured earth-tone knitted co-ord with crochet bag against olive backdrop",
+    gear: "Sony A7 IV · 85mm f/1.4 GM · Diffused daylight key with subtle bounce",
+    concept: "Highlighting natural fiber weaves, tactile knitwear details, and relaxed contemporary posture."
+  },
+  {
+    id: "life-2", title: "Chromatic Winter", subtitle: "High-Fashion Editorial",
+    client: "Studio Vastra", location: "Chandigarh", category: "lifestyle",
+    tag: "Lifestyle & Apparel", image: "/images/lifestyle-2.jpg",
+    alt: "Profile portrait of model wearing colorful flecked knit scarf and taupe sweater",
+    gear: "Sony A7 IV · 85mm f/1.4 GM · Rim light accent & soft wrap",
+    concept: "An intimate profile study balancing rich knit colors against understated architectural tones."
+  },
+  {
+    id: "life-3", title: "Minimal Silhouette", subtitle: "Contemporary Apparel",
+    client: "Studio Vastra", location: "Studio", category: "lifestyle",
+    tag: "Lifestyle & Apparel", image: "/images/lifestyle-3.jpg",
+    alt: "Contemporary apparel lookbook frame featuring model in neutral studio setting",
+    gear: "Sony A7 IV · 50mm f/1.4 · Large scrim diffusion",
+    concept: "Calm negative space, balanced proportions, and clean lines highlighting garment drape."
+  },
+  {
+    id: "life-4", title: "Artisan Crochet & Craft", subtitle: "Textile & Bag Campaign",
+    client: "Handmade Atelier", location: "Chandigarh", category: "lifestyle",
+    tag: "Lifestyle & Apparel", image: "/images/lifestyle-4.jpg",
+    alt: "Model draped in vibrant crochet granny square shawl with mustard knitted handbag",
+    gear: "Sony A7 IV · 50mm f/1.4 GM · Soft overhead fill with directional side light",
+    concept: "Celebrating craftsmanship, generational heritage patterns, and contemporary street styling."
+  },
+  {
+    id: "life-5", title: "Studio Neutral Lookbook", subtitle: "Capsule Collection",
+    client: "Apparel Studio", location: "Studio", category: "lifestyle",
+    tag: "Lifestyle & Apparel", image: "/images/lifestyle-5.jpg",
+    alt: "Fashion model presenting new season silhouette in clean editorial setting",
+    gear: "Sony A7 IV · 85mm f/1.4 GM · Dual softbox configuration",
+    concept: "Refined studio lighting emphasizing apparel form, drape, and effortless poise."
+  },
+  {
+    id: "life-6", title: "Urban Expression", subtitle: "Street & Contemporary Lookbook",
+    client: "Urban Threads", location: "Chandigarh", category: "lifestyle",
+    tag: "Lifestyle & Apparel", image: "/images/lifestyle-6.jpg",
+    alt: "Editorial lifestyle capture highlighting modern urban apparel and styling",
+    gear: "Sony A7 IV · 35mm f/1.4 GM · Ambient city glow & portable strobe",
+    concept: "Dynamic movement, modern energy, and authentic street editorial aesthetics."
+  },
+
+  // --- Clothing & Haute Couture (6) ---
+  {
+    id: "cloth-1", title: "Royal Zardozi Bridal", subtitle: "Haute Couture Lookbook",
+    client: "Rawas Atelier", location: "Chandigarh", category: "clothing",
+    tag: "Haute Couture", image: "/images/clothing-1.jpg",
+    alt: "Royal crimson bridal couture with rich gold zardozi embroidery surrounded by candelabras",
+    gear: "Sony A7 IV · 85mm f/1.4 GM · Balanced continuous warm lantern key & soft rim",
+    concept: "Opulent royal palace aesthetic highlighting intricate metallic threadwork, rich velvet texture, and candlelit ambiance."
+  },
+  {
+    id: "cloth-2", title: "Gilded Corset Couture", subtitle: "Modern Aristocracy Campaign",
+    client: "Rawas Atelier", location: "Chandigarh", category: "clothing",
+    tag: "Haute Couture", image: "/images/clothing-2.jpg",
+    alt: "Gold embroidered corset couture gown with classical framed paintings backdrop",
+    gear: "Sony A7 IV · 50mm f/1.2 GM · Directional softbox sculpted for drapery sheen",
+    concept: "Blending classical fine-art portraiture with contemporary couture tailoring and gilded embroidery."
+  },
+  {
+    id: "cloth-3", title: "Crimson Velvet Silhouette", subtitle: "Ceremonial Evening Collection",
+    client: "Rawas Atelier", location: "Chandigarh", category: "clothing",
+    tag: "Haute Couture", image: "/images/clothing-3.jpg",
+    alt: "Model in heavily embellished bridal couture under dramatic architectural arches",
+    gear: "Sony A7 IV · 85mm f/1.4 GM · Atmospheric rim light & soft fill card",
+    concept: "Dramatic chiaroscuro accentuating regal silhouette lines, heavy drape weight, and luxurious artisan details."
+  },
+  {
+    id: "cloth-4", title: "Handcrafted Zari Craft", subtitle: "Artisanal Detail Shoot",
+    client: "Rawas Atelier", location: "Studio", category: "clothing",
+    tag: "Haute Couture", image: "/images/clothing-4.jpg",
+    alt: "Intricate close-up of gold needlework and gemstone adornments on bridal couture",
+    gear: "Sony A7 IV · 90mm Macro f/2.8 · Dual strip softboxes for metallic sheen",
+    concept: "Macro focal precision celebrating master craftsmen's micro-embroidery, seed pearl setting, and heritage artistry."
+  },
+  {
+    id: "cloth-5", title: "Imperial Lookbook Series", subtitle: "Autumn/Winter Haute Couture",
+    client: "Rawas Atelier", location: "Chandigarh", category: "clothing",
+    tag: "Haute Couture", image: "/images/clothing-5.jpg",
+    alt: "Full length portrait of bride in opulent crimson lehenga in heritage mansion interior",
+    gear: "Sony A7 IV · 35mm f/1.4 GM · Atmospheric ambient blend with bounced strobe",
+    concept: "Grand architectural scale framing timeless bridal grandeur for high-end fashion editorial lookbooks."
+  },
+  {
+    id: "cloth-6", title: "Couture Veil & Elegance", subtitle: "Bridal Veil & Statement Series",
+    client: "Rawas Atelier", location: "Studio", category: "clothing",
+    tag: "Haute Couture", image: "/images/clothing-6.jpg",
+    alt: "Editorial portrait showcasing sheer embroidered dupatta veil and statement polki jewelry",
+    gear: "Sony A7 IV · 85mm f/1.4 GM · Large overhead diffused octabox",
+    concept: "Soft luminous portraiture capturing sheer tulle transparency, radiant skin tones, and regal poise."
+  }
+];
+---
+
+<section class="work" id="work" aria-labelledby="work-heading">
+  <div class="container">
+
+    <!-- Editorial Section Header -->
+    <header class="work-header reveal">
+      <div class="work-header-left">
+        <p class="eyebrow"><span class="section-line"></span>Selected Portfolio</p>
+        <h2 id="work-heading" class="work-title">
+          Selected<br /><em>Campaigns</em>
+        </h2>
+      </div>
+      <div class="work-header-right">
+        <p class="work-desc">
+          High-end commercial imagery for restaurants, cafes, e-commerce brands,
+          and lifestyle labels across India. Directed by Nitin Singh Sandhu.
+        </p>
+        <div class="work-count-pill">
+          <span class="work-count-num">30</span>
+          <span>Campaigns</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Filter Tabs — NO "All Campaigns" -->
+    <div class="work-tabs reveal delay-1" role="tablist" aria-label="Filter campaigns by category">
+      <button class="tab active" data-filter="restaurant" role="tab" aria-selected="true" id="tab-restaurant">
+        <span class="tab-index">01</span>
+        <span>Restaurant &amp; Cafe</span>
+      </button>
+      <button class="tab" data-filter="ecommerce" role="tab" aria-selected="false" id="tab-ecommerce">
+        <span class="tab-index">02</span>
+        <span>E-Commerce</span>
+      </button>
+      <button class="tab" data-filter="ling" role="tab" aria-selected="false" id="tab-ling">
+        <span class="tab-index">03</span>
+        <span>Ling's Brand</span>
+      </button>
+      <button class="tab" data-filter="lifestyle" role="tab" aria-selected="false" id="tab-lifestyle">
+        <span class="tab-index">04</span>
+        <span>Lifestyle &amp; Apparel</span>
+      </button>
+      <button class="tab" data-filter="clothing" role="tab" aria-selected="false" id="tab-clothing">
+        <span class="tab-index">05</span>
+        <span>Clothing &amp; Couture</span>
+      </button>
+    </div>
+
+    <!-- Editorial Masonry Grid -->
+    <div class="work-masonry" id="work-grid">
+      {projects.map((item, index) => (
+        <article
+          class="work-card"
+          data-category={item.category}
+          data-orientation={item.category === "ecommerce" || item.category === "ling" ? "landscape" : "portrait"}
+          data-id={item.id}
+          data-global-index={index}
+        >
+          <button
+            type="button"
+            class="work-card-btn"
+            aria-label={`View ${item.title}`}
+            data-open-modal={item.id}
+          >
+            <div class="work-img-wrap">
+              <img
+                src={item.image}
+                alt={item.alt}
+                class="work-img"
+                loading={index < 6 ? "eager" : "lazy"}
+                decoding="async"
+              />
+            </div>
+            <div class="work-overlay"></div>
+            <div class="work-hover-meta">
+              <span class="work-hover-client">{item.client}</span>
+              <span class="work-hover-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="location-icon" aria-hidden="true">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+                {item.location}
+              </span>
+            </div>
+          </button>
+        </article>
+      ))}
+    </div>
+
+  </div>
+
+  <!-- Lightbox Dialog -->
+  <dialog id="project-modal" class="project-modal" aria-labelledby="modal-title">
+    <div class="modal-window">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Close project view">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+
+      <div class="modal-content">
+        <div class="modal-media">
+          <img id="modal-img" src="" alt="" class="modal-img" />
+        </div>
+        <div class="modal-info">
+          <div class="modal-header">
+            <span id="modal-tag" class="badge-red">Category</span>
+            <h3 id="modal-title" class="modal-title">Project Title</h3>
+            <p id="modal-subtitle" class="modal-subtitle">Subtitle</p>
+          </div>
+
+          <div class="modal-meta-grid">
+            <div class="modal-meta-item">
+              <span class="meta-item-label">Client</span>
+              <span id="modal-client" class="meta-item-val">Client Name</span>
+            </div>
+            <div class="modal-meta-item">
+              <span class="meta-item-label">Location</span>
+              <span id="modal-location" class="meta-item-val">Chandigarh</span>
+            </div>
+          </div>
+
+          <div class="modal-section">
+            <span class="meta-item-label">Art Direction &amp; Concept</span>
+            <p id="modal-concept" class="modal-concept-text"></p>
+          </div>
+
+          <div class="modal-section">
+            <span class="meta-item-label">Camera &amp; Lighting Setup</span>
+            <p id="modal-gear" class="modal-gear-text"></p>
+          </div>
+
+          <div class="modal-actions">
+            <a
+              id="modal-wa-link"
+              href="https://wa.me/918264531881"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--red modal-cta"
+            >
+              <span>Book Shoot Like This</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </a>
+            <div class="modal-nav-btns">
+              <button type="button" class="modal-nav-btn" id="modal-prev" aria-label="Previous">←</button>
+              <button type="button" class="modal-nav-btn" id="modal-next" aria-label="Next">→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</section>
+
+<style>
+  /* ── Section ── */
+  .work {
+    padding-block: var(--space-section);
+    position: relative;
+    background: var(--bg-base);
+    border-top: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .work::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.3;
+  }
+
+  /* ── Header ── */
+  .work-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-bottom: clamp(3rem, 5vw, 5rem);
+  }
+
+  .work-title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 300;
+    color: var(--text-white);
+    line-height: 1.0;
+    margin-top: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .work-title em {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--gold-light);
+  }
+
+  .work-header-right {
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    align-items: flex-end;
+  }
+
+  .work-desc {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    text-align: right;
+  }
+
+  .work-count-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 0.45rem 1rem;
+    border-radius: 1px;
+  }
+
+  .work-count-num {
+    color: var(--gold);
+    font-size: 1.1em;
+  }
+
+  /* ── Filter Tabs — Editorial style ── */
+  .work-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: clamp(2.5rem, 4vw, 4rem);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tab {
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 1rem 1.6rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.25s var(--ease-expo);
+    position: relative;
+    bottom: -1px;
+  }
+
+  .tab-index {
+    font-size: 0.6em;
+    opacity: 0.5;
+    letter-spacing: 0.05em;
+  }
+
+  .tab.active {
+    color: var(--text-white);
+    border-bottom-color: var(--gold);
+  }
+
+  .tab.active .tab-index {
+    color: var(--gold);
+    opacity: 1;
+  }
+
+  .tab:hover:not(.active) {
+    color: var(--text-primary);
+  }
+
+  /* ═══════════════════════════════════════════════════════
+     ORGANIC EDITORIAL COLLAGE GRID
+     
+     The 6 photos in each category are arranged like a human
+     art director laid them out — irregular sizes, no equal
+     columns, deliberate tension between large and small.
+     
+     Desktop 12-col layout (auto-rows 180px base unit):
+     
+     pos-0: BIG feature (8 cols × 3 rows = dominates)
+     pos-1: Tall-narrow (4 cols × 2 rows, right of pos-0)
+     pos-2: Small square (4 cols × 1 row, below pos-1)
+     pos-3: Wide short  (5 cols × 1 row, left bottom)
+     pos-4: Tall medium (3 cols × 2 rows, mid bottom)
+     pos-5: Thin tall   (4 cols × 2 rows, right)
+  ═══════════════════════════════════════════════════════ */
+  /* ═══════════════════════════════════════════════════════
+     EDITORIAL MASONRY GRID — NO CROPPING, COMPLETE IMAGES
+     
+     Balanced 3-column layout where:
+     pos-0: Dominant feature top-left (2 cols × 2 rows)
+     pos-1: Accent top-right (1 col × 1 row)
+     pos-2: Accent mid-right (1 col × 1 row)
+     pos-3: Accent bottom-left (1 col × 1 row)
+     pos-4: Accent mid-bottom (1 col × 1 row)
+     pos-5: Dominant feature bottom-right (2 cols × 2 rows)
+     
+     Every card preserves true 2:3 (portrait) or 3:2 (landscape)
+     aspect ratio so 100% of the photograph is fully visible!
+  ═══════════════════════════════════════════════════════ */
+  .work-masonry {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+    align-items: stretch;
+  }
+
+  /* Hidden state */
+  .work-card.is-hidden {
+    display: none !important;
+  }
+
+  /* Big Hero Feature 1 (Top Left: 2 cols × 2 rows) */
+  .work-card.pos-0 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  /* Small accent top right (1 col × 1 row) */
+  .work-card.pos-1 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  /* Small accent mid right (1 col × 1 row) */
+  .work-card.pos-2 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
+  /* Small accent bottom left (1 col × 1 row) */
+  .work-card.pos-3 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  /* Small accent mid bottom (1 col × 1 row) */
+  .work-card.pos-4 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  /* Big Hero Feature 2 (Bottom Right: 2 cols × 2 rows) */
+  .work-card.pos-5 {
+    grid-column: 2 / 4;
+    grid-row: 3 / 5;
+  }
+
+  /* Aspect ratios match actual photography orientation to show 100% complete photos */
+  .work-card[data-orientation="portrait"].pos-1,
+  .work-card[data-orientation="portrait"].pos-2,
+  .work-card[data-orientation="portrait"].pos-3,
+  .work-card[data-orientation="portrait"].pos-4 {
+    aspect-ratio: 2 / 3;
+  }
+
+  .work-card[data-orientation="landscape"].pos-1,
+  .work-card[data-orientation="landscape"].pos-2,
+  .work-card[data-orientation="landscape"].pos-3,
+  .work-card[data-orientation="landscape"].pos-4 {
+    aspect-ratio: 3 / 2;
+  }
+
+  .work-card.pos-0,
+  .work-card.pos-5 {
+    height: 100%;
+    min-height: 0;
+  }
+
+  /* Tablet — 2-column layout */
+  @media (min-width: 601px) and (max-width: 960px) {
+    .work-masonry {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .work-card.pos-0 { grid-column: 1 / 3; grid-row: auto; }
+    .work-card.pos-1 { grid-column: 1 / 2; grid-row: auto; }
+    .work-card.pos-2 { grid-column: 2 / 3; grid-row: auto; }
+    .work-card.pos-3 { grid-column: 1 / 2; grid-row: auto; }
+    .work-card.pos-4 { grid-column: 2 / 3; grid-row: auto; }
+    .work-card.pos-5 { grid-column: 1 / 3; grid-row: auto; }
+
+    .work-card[data-orientation="portrait"] { aspect-ratio: 2 / 3; }
+    .work-card[data-orientation="landscape"] { aspect-ratio: 3 / 2; }
+    .work-card[data-orientation="portrait"].pos-0,
+    .work-card[data-orientation="portrait"].pos-5 { aspect-ratio: 16 / 11; }
+    .work-card[data-orientation="landscape"].pos-0,
+    .work-card[data-orientation="landscape"].pos-5 { aspect-ratio: 16 / 10; }
+  }
+
+  /* Mobile — single column stacked with natural uncropped proportions */
+  @media (max-width: 600px) {
+    .work-masonry {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .work-card.pos-0,
+    .work-card.pos-1,
+    .work-card.pos-2,
+    .work-card.pos-3,
+    .work-card.pos-4,
+    .work-card.pos-5 {
+      grid-column: 1 / -1;
+      grid-row: auto;
+    }
+    .work-card[data-orientation="portrait"] {
+      aspect-ratio: 2 / 3;
+    }
+    .work-card[data-orientation="landscape"] {
+      aspect-ratio: 3 / 2;
+    }
+  }
+
+  /* ── Card ── */
+  .work-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s var(--ease-expo);
+    border-radius: 2px;
+  }
+
+  .work-card:hover {
+    border-color: rgba(160, 120, 55, 0.40);
+    box-shadow: 0 24px 60px rgba(30, 20, 5, 0.22);
+    transform: translateY(-2px);
+  }
+
+  .work-card-btn {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .work-img-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .work-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transform: scale(1.0);
+    transition: transform 0.6s var(--ease-expo);
+    will-change: transform;
+  }
+
+  .work-card:hover .work-img {
+    transform: scale(1.02);
+  }
+
+  .work-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(8, 6, 4, 0.94) 0%,
+      rgba(8, 6, 4, 0.52) 30%,
+      rgba(8, 6, 4, 0.08) 55%,
+      transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+  }
+
+  .work-card:hover .work-overlay {
+    opacity: 1;
+  }
+
+  /* Slide-up hover metadata (both in same golden font and color, small) */
+  .work-hover-meta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: clamp(0.85rem, 1.4vw, 1.3rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+  }
+
+  .work-card:hover .work-hover-meta {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .work-hover-client,
+  .work-hover-location {
+    font-family: var(--font-label);
+    font-size: clamp(0.62rem, 0.8vw, 0.70rem);
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #F0C058;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.95);
+    line-height: 1.35;
+  }
+
+  .location-icon {
+    color: #F0C058;
+    flex-shrink: 0;
+  }
+
+  /* ── Modal ── */
+  .project-modal {
+    margin: auto;
+    border: none;
+    padding: 0;
+    background: transparent;
+    max-width: 1080px;
+    width: 92vw;
+    color: var(--text-primary);
+    overflow: visible;
+  }
+
+  .project-modal::backdrop {
+    background: rgba(8, 6, 4, 0.94);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .modal-window {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-warm);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.9);
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    z-index: 20;
+    width: 40px;
+    height: 40px;
+    background: rgba(10, 8, 6, 0.85);
+    border: 1px solid var(--border-warm);
+    border-radius: 50%;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .modal-close:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #fff;
+  }
+
+  .modal-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 860px) {
+    .modal-content {
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+  }
+
+  .modal-media {
+    background: #060504;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 380px;
+    max-height: 80vh;
+    padding: 1.5rem;
+  }
+
+  .modal-img {
+    max-width: 100%;
+    max-height: 76vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .modal-info {
+    padding: clamp(2rem, 3.5vw, 2.8rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    justify-content: center;
+    border-left: 1px solid var(--border);
+  }
+
+  .modal-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+    font-weight: 400;
+    color: var(--text-white);
+    margin-top: 0.5rem;
+    line-height: 1.1;
+  }
+
+  .modal-subtitle {
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .modal-meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    border-block: 1px solid var(--border);
+    padding-block: 1rem;
+  }
+
+  .meta-item-label {
+    display: block;
+    font-family: var(--font-label);
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+    opacity: 0.75;
+  }
+
+  .meta-item-val {
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    color: var(--text-white);
+    font-weight: 500;
+  }
+
+  .modal-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .modal-concept-text,
+  .modal-gear-text {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  .modal-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .modal-nav-btns {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .modal-nav-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    background: rgba(255, 245, 220, 0.03);
+    color: var(--text-primary);
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+
+  .modal-nav-btn:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #fff;
+  }
+</style>
+
+<script define:vars={{ projects }}>
+  // ── Masonry position assignment ──
+  // Assigns .pos-0 through .pos-5 to visible cards for editorial layout
+  function assignMasonryPositions(activeFilter) {
+    const allCards = document.querySelectorAll('.work-card');
+
+    // Remove all position and hidden classes
+    allCards.forEach(card => {
+      for (let i = 0; i < 6; i++) card.classList.remove(`pos-${i}`);
+      card.classList.remove('is-hidden');
+    });
+
+    // Assign positions to visible cards
+    let posIndex = 0;
+    allCards.forEach(card => {
+      const cat = card.getAttribute('data-category') || '';
+      if (cat === activeFilter) {
+        card.classList.add(`pos-${posIndex % 6}`);
+        posIndex++;
+      } else {
+        card.classList.add('is-hidden');
+      }
+    });
+  }
+
+  // ── Tab filter logic ──
+  const tabs = document.querySelectorAll('.tab');
+  let currentFilter = 'restaurant';
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const filter = tab.getAttribute('data-filter');
+      if (!filter || filter === currentFilter) return;
+
+      currentFilter = filter;
+
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+
+      assignMasonryPositions(filter);
+    });
+  });
+
+  // Initialize with first category
+  assignMasonryPositions('restaurant');
+
+  // ── Lightbox ──
+  const modal = document.getElementById('project-modal');
+  const modalClose = document.getElementById('modal-close');
+  const modalImg = document.getElementById('modal-img');
+  const modalTag = document.getElementById('modal-tag');
+  const modalTitle = document.getElementById('modal-title');
+  const modalSubtitle = document.getElementById('modal-subtitle');
+  const modalClient = document.getElementById('modal-client');
+  const modalLocation = document.getElementById('modal-location');
+  const modalConcept = document.getElementById('modal-concept');
+  const modalGear = document.getElementById('modal-gear');
+  const modalWaLink = document.getElementById('modal-wa-link');
+  const modalPrev = document.getElementById('modal-prev');
+  const modalNext = document.getElementById('modal-next');
+
+  let currentIndex = 0;
+
+  function getVisibleProjects() {
+    return projects.filter(p => p.category === currentFilter);
+  }
+
+  function openProject(idx) {
+    const visible = getVisibleProjects();
+    if (idx < 0) idx = visible.length - 1;
+    if (idx >= visible.length) idx = 0;
+    currentIndex = idx;
+    const p = visible[idx];
+
+    if (modalImg) { modalImg.src = p.image; modalImg.alt = p.alt; }
+    if (modalTag) modalTag.textContent = p.tag;
+    if (modalTitle) modalTitle.textContent = p.title;
+    if (modalSubtitle) modalSubtitle.textContent = p.subtitle;
+    if (modalClient) modalClient.textContent = p.client;
+    if (modalLocation) modalLocation.textContent = p.location;
+    if (modalConcept) modalConcept.textContent = p.concept;
+    if (modalGear) modalGear.textContent = p.gear;
+
+    if (modalWaLink) {
+      const msg = encodeURIComponent(`Hi Nitin, I'd like to book a commercial shoot similar to "${p.title}" (${p.client}).`);
+      modalWaLink.href = `https://wa.me/918264531881?text=${msg}`;
+    }
+
+    if (modal && !modal.open) modal.showModal();
+  }
+
+  document.querySelectorAll('[data-open-modal]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-open-modal');
+      const visible = getVisibleProjects();
+      const idx = visible.findIndex(p => p.id === id);
+      if (idx !== -1) openProject(idx);
+    });
+  });
+
+  modalClose?.addEventListener('click', () => modal?.close());
+  modalPrev?.addEventListener('click', () => openProject(currentIndex - 1));
+  modalNext?.addEventListener('click', () => openProject(currentIndex + 1));
+  modal?.addEventListener('click', e => { if (e.target === modal) modal.close(); });
+  window.addEventListener('keydown', e => {
+    if (modal?.open) {
+      if (e.key === 'ArrowLeft') openProject(currentIndex - 1);
+      if (e.key === 'ArrowRight') openProject(currentIndex + 1);
+    }
+  });
+</script>

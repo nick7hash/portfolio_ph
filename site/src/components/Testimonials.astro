@@ -1,0 +1,247 @@
+---
+// Testimonials & Client Logos component
+const reviews = [
+  {
+    quote: "Nitin doesn't just photograph dishes — he translates kitchen aroma, plating geometry, and dining ambiance into sheer appetite. Our launch campaign was packed out within 48 hours of releasing his frames.",
+    author: "Kabir Sachdev",
+    role: "Managing Director",
+    brand: "Meliaa Fine Dine & Lounge",
+    sector: "Hospitality"
+  },
+  {
+    quote: "We needed our winter lookbook to feel tactile and high-fashion without losing the authentic warmth of our weaves. Nitin delivered lighting and composition that rivaled international editorial spreads.",
+    author: "Avantika Singhal",
+    role: "Creative Director",
+    brand: "Studio Vastra",
+    sector: "Apparel & Fashion"
+  },
+  {
+    quote: "Fast on set, deeply respectful of the product, and with color grading that is consistently cinematic. Grays Photography is the first studio we call for brand campaigns in North India.",
+    author: "Armaan Gill",
+    role: "Head of Marketing",
+    brand: "Nomad Hospitality Group",
+    sector: "Restaurant Group"
+  }
+];
+
+const brands = [
+  "MELIAA RESTAURANT",
+  "LING'S KITCHEN",
+  "STUDIO VASTRA",
+  "THE GLASSROOM",
+  "NOMAD HOSPITALITY",
+  "SOLESTRIDE CO.",
+  "ATELIER Z",
+  "THE BOTANICAL BAR"
+];
+---
+
+<section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <header class="testimonials-header reveal">
+      <p class="eyebrow"><span class="section-line"></span>Client Praise</p>
+      <h2 id="testimonials-heading" class="testimonials-title">
+        Trusted by Chefs,<br />
+        <span class="testimonials-title-accent">Founders &amp; Brands</span>
+      </h2>
+    </header>
+
+    <!-- Testimonials 3-Card Grid -->
+    <div class="testimonials-grid">
+      {reviews.map((item) => (
+        <article class="review-card reveal">
+          <p class="review-quote">"{item.quote}"</p>
+          <footer class="review-author-wrap">
+            <div class="author-avatar" aria-hidden="true">
+              {item.author.charAt(0)}
+            </div>
+            <div class="author-meta">
+              <span class="author-name">{item.author}</span>
+              <span class="author-role">{item.role} · {item.brand}</span>
+              <span class="badge-red author-badge">{item.sector}</span>
+            </div>
+          </footer>
+        </article>
+      ))}
+    </div>
+
+    <!-- Client Logo Marquee -->
+    <div class="brand-strip reveal">
+      <p class="brand-strip-title">SELECTED COLLABORATORS &amp; HOSPITALITY PARTNERS</p>
+      <div class="brand-marquee" aria-hidden="true">
+        <div class="brand-track">
+          {brands.concat(brands).map((brand) => (
+            <span class="brand-name">{brand}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding-block: var(--space-section);
+    background: var(--bg-mid);
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+  }
+
+  .testimonials-header {
+    text-align: center;
+    max-width: 600px;
+    margin-inline: auto;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .testimonials-title {
+    font-size: var(--text-2xl);
+    color: var(--color-text-white);
+    line-height: 1.05;
+    margin-top: 0.3rem;
+  }
+
+  .testimonials-title-accent {
+    color: var(--gold-light);
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: clamp(3.5rem, 6vw, 5rem);
+  }
+
+  @media (min-width: 900px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .review-card {
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    padding: clamp(1.8rem, 3vw, 2.4rem);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.8rem;
+    transition: all 0.3s var(--ease-expo);
+  }
+
+  .review-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-warm);
+    box-shadow: 0 12px 30px rgba(30, 20, 5, 0.10);
+  }
+
+  .review-quote {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--text-primary);
+    font-style: italic;
+    letter-spacing: 0.01em;
+  }
+
+  .review-author-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.2rem;
+  }
+
+  .author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--gold-glow);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .author-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: flex-start;
+  }
+
+  .author-name {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    font-family: var(--font-display);
+    color: var(--text-white);
+  }
+
+  .author-role {
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+  }
+
+  .author-badge {
+    margin-top: 0.2rem;
+    font-size: 0.6rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  /* Brand Marquee Strip */
+  .brand-strip {
+    border-top: 1px solid var(--color-border);
+    padding-top: 2rem;
+    text-align: center;
+  }
+
+  .brand-strip-title {
+    font-family: var(--font-label);
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-text-dim);
+    margin-bottom: 1.5rem;
+  }
+
+  .brand-marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  }
+
+  .brand-track {
+    display: inline-flex;
+    gap: 3.5rem;
+    animation: marquee 25s linear infinite;
+  }
+
+  .brand-name {
+    font-family: var(--font-label);
+    font-size: clamp(0.85rem, 1.4vw, 1rem);
+    letter-spacing: 0.16em;
+    color: var(--color-text-secondary);
+    transition: color 0.3s;
+  }
+
+  .brand-name:hover {
+    color: var(--gold);
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+</style>

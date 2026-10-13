@@ -1,0 +1,230 @@
+---
+// Process section — Studio methodology with red badge accents
+const steps = [
+  {
+    num: "01",
+    phase: "Discovery & Direction",
+    title: "Moodboard & Shotlist",
+    desc: "We analyze your brand aesthetics, menu items, or collection pieces. We define lighting mood, composition angles, and props before production begins.",
+    deliverable: "Visual Moodboard · Curated Shotlist · Styling Blueprint"
+  },
+  {
+    num: "02",
+    phase: "Production & Capture",
+    title: "Tethered On-Set Capture",
+    desc: "Shooting live to calibrated client monitors. We sculpt strobe and continuous light with precision modifiers, adjusting in real time with clients and stylists.",
+    deliverable: "Live Client Monitor · Strobe Sculpting · Art Direction"
+  },
+  {
+    num: "03",
+    phase: "Post-Production",
+    title: "Retouching & Color Science",
+    desc: "Every select frame receives hand editorial retouching. We balance highlights, preserve organic fabric/food textures, and dial in signature cinematic contrast.",
+    deliverable: "Editorial Color Grade · Texture Preservation · Cleanup"
+  },
+  {
+    num: "04",
+    phase: "Delivery & Formats",
+    title: "Multi-Platform Export",
+    desc: "Master files exported for large-scale print, web-optimized portfolios, and vertical 9:16 cuts ready for high-engagement Instagram reels and digital ads.",
+    deliverable: "Print-Ready TIFFs · Lossless WebP · 4K Social Assets"
+  }
+];
+---
+
+<section class="process" id="process" aria-labelledby="process-heading">
+  <div class="container">
+    <div class="process-header reveal">
+      <div class="process-header-left">
+        <p class="eyebrow"><span class="section-line"></span>Methodology</p>
+        <h2 id="process-heading" class="process-title">
+          How We Craft<br />
+          <span class="process-title-accent">Commercial Visuals</span>
+        </h2>
+      </div>
+      <div class="process-header-right">
+        <p class="process-lead">
+          A disciplined production workflow trusted by North India's premier
+          restaurants, boutique fashion labels, and advertising agencies.
+        </p>
+        <div class="process-badge-row">
+          <span class="badge-red">48h Rush Turnaround Available</span>
+          <span class="process-pill">Pan-India Availability</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="process-grid">
+      {steps.map((step) => (
+        <div class="process-card reveal">
+          <div class="process-card-top">
+            <span class="step-num">{step.num}</span>
+            <span class="step-phase">{step.phase}</span>
+          </div>
+          <h3 class="step-title">{step.title}</h3>
+          <p class="step-desc">{step.desc}</p>
+          <div class="step-footer">
+            <span class="step-footer-label">Key Output:</span>
+            <span class="step-footer-val">{step.deliverable}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .process {
+    padding-block: var(--space-section);
+    background: var(--bg-base);
+    border-top: 1px solid var(--border);
+    position: relative;
+  }
+
+  .process-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .process-title {
+    font-size: var(--text-2xl);
+    color: var(--color-text-white);
+    line-height: 1.05;
+    margin-top: 0.3rem;
+  }
+
+  .process-title-accent {
+    color: var(--gold-light);
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  .process-lead {
+    max-width: 480px;
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
+  }
+
+  .process-badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+  }
+
+  .process-pill {
+    font-family: var(--font-label);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    background: var(--bg-surface);
+    padding: 0.35rem 0.85rem;
+    border-radius: 2px;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .process-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .process-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .process-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    padding: clamp(1.8rem, 2.5vw, 2.2rem);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+    transition: all 0.3s var(--ease-expo);
+  }
+
+  .process-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-warm);
+    box-shadow: 0 15px 35px rgba(30, 20, 5, 0.14);
+  }
+
+  .process-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.9rem;
+  }
+
+  .step-num {
+    font-family: var(--font-label);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .step-phase {
+    font-family: var(--font-label);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-dim);
+  }
+
+  .step-title {
+    font-size: 1.25rem;
+    font-family: var(--font-display);
+    color: var(--text-white);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .step-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+    flex-grow: 1;
+  }
+
+  .step-footer {
+    border-top: 1px dashed var(--color-border);
+    padding-top: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .step-footer-label {
+    font-family: var(--font-label);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .step-footer-val {
+    font-size: 0.72rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+  }
+</style>
