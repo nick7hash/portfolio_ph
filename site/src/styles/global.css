@@ -1,0 +1,345 @@
+/* ============================================================
+   GRAYS PHOTOGRAPHY — Premium Editorial Design System
+   Theme: Warm Cream Ivory · Editorial Light · Gold & Terracotta
+   Typography: Cormorant Garamond (display serif) + DM Sans (body)
+   Direction: Human-crafted, airy, cinematic, editorial magazine
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* ── Warm Cream Ivory Palette ── */
+  --bg-base:      #FAF7F2;      /* warm ivory paper */
+  --bg-mid:       #F3EFE7;      /* warm parchment */
+  --bg-surface:   #EDE8DF;      /* warm parchment card */
+  --bg-elevated:  #E8E2D8;      /* card hover state */
+  --bg-hover:     #DDD7CB;      /* deeper hover */
+
+  /* Gradient Backgrounds */
+  --grad-body:
+    radial-gradient(ellipse 120% 70% at 50% 0%,
+      rgba(210, 175, 120, 0.18) 0%,
+      rgba(240, 220, 185, 0.10) 40%,
+      transparent 70%),
+    radial-gradient(ellipse 60% 50% at 90% 80%,
+      rgba(195, 155, 95, 0.10) 0%,
+      transparent 60%),
+    radial-gradient(ellipse 50% 40% at 10% 60%,
+      rgba(220, 190, 140, 0.08) 0%,
+      transparent 55%),
+    #FAF7F2;
+
+  --grad-section-alt: linear-gradient(180deg, #F3EFE7 0%, #FAF7F2 100%);
+  --grad-card-over: linear-gradient(to top,
+    rgba(30, 22, 12, 0.88) 0%,
+    rgba(30, 22, 12, 0.45) 45%,
+    rgba(30, 22, 12, 0.05) 100%);
+  --grad-gold: linear-gradient(135deg, #B8820A 0%, #D4A32C 50%, #B8820A 100%);
+
+  /* Borders */
+  --border:       rgba(160, 130, 85, 0.16);
+  --border-warm:  rgba(160, 120, 55, 0.30);
+  --border-glow:  rgba(160, 120, 55, 0.55);
+
+  /* Text — Espresso & Warm Charcoal */
+  --text-primary:   #2C1F0E;    /* deep espresso brown */
+  --text-secondary: #6B5440;    /* warm mid-brown */
+  --text-muted:     #9C8670;    /* muted warm */
+  --text-white:     #1A1008;    /* darkest — for headings */
+
+  /* Accents — Warm Gold Theme */
+  --red:          #B8820A;
+  --red-bright:   #D4A32C;
+  --red-glow:     rgba(184, 130, 10, 0.25);
+  --red-subtle:   rgba(184, 130, 10, 0.10);
+  --gold:         #B8820A;
+  --gold-light:   #D4A32C;
+  --gold-glow:    rgba(184, 130, 10, 0.20);
+  --terracotta:   #B85C38;
+  --terracotta-subtle: rgba(184, 92, 56, 0.10);
+
+  /* For backward-compatibility with components using old var names */
+  --color-bg-dark:          var(--bg-surface);
+  --color-bg-subtle:        var(--bg-mid);
+  --color-surface:          var(--bg-surface);
+  --color-surface-elevated: var(--bg-elevated);
+  --color-surface-hover:    var(--bg-hover);
+  --color-border:           var(--border);
+  --color-border-light:     var(--border-warm);
+  --color-border-red:       rgba(184, 130, 10, 0.30);
+  --color-text-white:       var(--text-white);
+  --color-text-primary:     var(--text-primary);
+  --color-text-secondary:   var(--text-secondary);
+  --color-text-muted:       var(--text-muted);
+  --color-text-dim:         var(--text-muted);
+  --color-red:              var(--red);
+  --color-red-bright:       var(--red-bright);
+  --color-red-dark:         #8C5F08;
+  --color-red-subtle:       var(--red-subtle);
+  --color-red-glow:         var(--red-glow);
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+  --font-label:   'Space Mono', 'Courier New', monospace;
+
+  /* Type Scale */
+  --text-xs:    clamp(0.62rem, 0.58rem + 0.18vw, 0.72rem);
+  --text-sm:    clamp(0.78rem, 0.73rem + 0.22vw, 0.88rem);
+  --text-base:  clamp(0.95rem, 0.88rem + 0.28vw, 1.05rem);
+  --text-md:    clamp(1.1rem, 1.0rem + 0.42vw, 1.3rem);
+  --text-lg:    clamp(1.3rem, 1.1rem + 0.9vw, 1.85rem);
+  --text-xl:    clamp(1.8rem, 1.4rem + 1.6vw, 2.8rem);
+  --text-2xl:   clamp(2.4rem, 1.9rem + 2.2vw, 3.8rem);
+  --text-3xl:   clamp(3.2rem, 2.4rem + 3.8vw, 5.8rem);
+  --text-display: clamp(4.5rem, 3.2rem + 6vw, 9rem);
+
+  /* Spacing */
+  --space-section: clamp(5rem, 4rem + 6vw, 10rem);
+  --container-max: 1440px;
+  --gutter:        clamp(1.5rem, 4vw, 4rem);
+  --nav-height:    80px;
+
+  /* Easing */
+  --ease-expo:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background: #FAF7F2;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--text-primary);
+  background: var(--grad-body);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Headings use editorial serif ── */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--text-white); /* = #1A1008, espresso near-black */
+}
+
+h1 { font-weight: 300; }
+h2 { font-weight: 400; }
+h3 { font-weight: 500; }
+
+p {
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+}
+
+/* ── Layout ── */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ── Eyebrow / Section Labels ── */
+.eyebrow {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-line {
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* ── Category Badge ── */
+.badge-red {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--red);
+  color: #ffffff;
+  font-family: var(--font-label);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.75rem;
+  border-radius: 1px;
+  box-shadow: 0 4px 16px var(--red-glow);
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 1px;
+  transition: all 0.28s var(--ease-expo);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn--red {
+  background: var(--gold);
+  color: #FAF7F2;
+  border: 1px solid var(--gold);
+  box-shadow: 0 4px 20px var(--gold-glow);
+}
+
+.btn--red:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  color: #FAF7F2;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(184, 130, 10, 0.35);
+}
+
+.btn--ghost {
+  background: rgba(30, 20, 5, 0.06);
+  color: var(--text-primary);
+  border: 1px solid var(--border-warm);
+  backdrop-filter: blur(8px);
+}
+
+.btn--ghost:hover {
+  background: rgba(184, 130, 10, 0.12);
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--gold-glow);
+}
+
+.btn--gold {
+  background: var(--gold);
+  color: #FAF7F2;
+  border: 1px solid var(--gold);
+  font-weight: 700;
+  box-shadow: 0 4px 20px var(--gold-glow);
+}
+
+.btn--gold:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(184, 130, 10, 0.35);
+}
+
+.btn--instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 18px rgba(220, 39, 67, 0.3);
+}
+
+.btn--instagram:hover {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(220, 39, 67, 0.48);
+}
+
+.btn-arrow {
+  transition: transform 0.28s var(--ease-spring);
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(5px);
+}
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s var(--ease-expo), transform 0.75s var(--ease-expo);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.85s var(--ease-expo), transform 0.85s var(--ease-expo);
+}
+
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.32s; }
+.delay-4 { transition-delay: 0.44s; }
+
+/* ── Global Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F3EFE7; }
+::-webkit-scrollbar-thumb { background: rgba(160, 120, 55, 0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(160, 120, 55, 0.55); }
+
+/* ── Selection ── */
+::selection {
+  background: rgba(184, 130, 10, 0.20);
+  color: var(--text-white);
+}
